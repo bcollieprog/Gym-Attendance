@@ -13,3 +13,22 @@ In order to gather the attendance data, I decided to use a webscraper to gather 
 The Revo website https://revofitness.com.au/livemembercount/, has dropdowns for each location. In order to map each location, I need positional coordinates for each location, which was gathered manually through Google. 
 
 Inspecting the html of the webpage reveals the name of the HTML asset necessary to be scraped. 
+
+The following libraries are needed to run the program:
+
+'''
+import time
+from datetime import datetime
+import csv
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
+import concurrent.futures
+import folium
+from folium.plugins import LocateControl
+from branca.colormap import LinearColormap as colourmap
+import webbrowser
+'''
